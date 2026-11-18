@@ -3,11 +3,11 @@
 - Roll Number: 202401100300058
 - Section: CSE AI A
 - GitHub Username: Anushka-google
-- Docker Hub Username: Anushka-google
+- Docker Hub Username: anushkakaushal
 
 ## Docker Hub Images
-- Frontend Image: Anushka-google/taskflow-frontend:latest
-- Backend Image: Anushka-google/taskflow-backend:latest
+- Frontend Image: anushkakaushal/taskflow-frontend:latest
+- Backend Image: anushkakaushal/taskflow-backend:latest
 
 ## Application Deployment
 - Application URL: http://localhost:8080
