@@ -22,6 +22,7 @@
   pre { background-color: #0f172a; color: #f8fafc; padding: 15px; border-radius: 6px; overflow-x: auto; font-size: 0.88em; }
   .badge-pass { background-color: #10b981; color: white; padding: 4px 8px; border-radius: 4px; font-weight: bold; }
   .box { background-color: #f8fafc; border-left: 4px solid #1a56db; padding: 15px; margin: 20px 0; }
+  .run-info { background: #e0f2fe; border: 1px solid #0284c7; padding: 12px; border-radius: 6px; margin: 15px 0; }
   @media print {
     body { max-width: 100%; margin: 0; padding: 10mm; }
     pre { white-space: pre-wrap; }
@@ -58,6 +59,8 @@
   <tr><td>Docker Hub Username</td><td><code>anushkakaushal</code></td></tr>
   <tr><td>Frontend Image</td><td><code>anushkakaushal/taskflow-frontend:latest</code></td></tr>
   <tr><td>Backend Image</td><td><code>anushkakaushal/taskflow-backend:latest</code></td></tr>
+  <tr><td>Docker Hub Backend URL</td><td><a href="https://hub.docker.com/r/anushkakaushal/taskflow-backend">https://hub.docker.com/r/anushkakaushal/taskflow-backend</a></td></tr>
+  <tr><td>Docker Hub Frontend URL</td><td><a href="https://hub.docker.com/r/anushkakaushal/taskflow-frontend">https://hub.docker.com/r/anushkakaushal/taskflow-frontend</a></td></tr>
 </table>
 
 <h2>4. Implementation Architecture & Files</h2>
@@ -89,24 +92,33 @@ EXPOSE 3000
 USER node
 CMD ["node", "src/server.js"]</code></pre>
 
-<h3>4.3 Docker Compose Multi-Container Orchestration</h3>
+<h3>4.3 Docker Compose Multi-Container Orchestration (docker-compose.yml)</h3>
 <p>Orchestrates 4 services (<code>frontend</code>, <code>backend</code>, <code>postgres</code>, <code>redis</code>) with container networking, persistent volume storage for PostgreSQL (<code>postgres_data</code>), and health check dependencies.</p>
 
+<h3>4.4 Deployment Compose Configuration (docker-compose.deploy.yml)</h3>
+<p>Validated production configuration without <code>build:</code> directives, pulling directly from Docker Hub.</p>
+
 <h2>5. CI/CD Pipeline Verification</h2>
+
+<div class="run-info">
+  <strong>GitHub Actions CD Run:</strong> <a href="https://github.com/Anushka-google/MSE-2-SSED-Morning/actions/runs/44246200661">Run #4 (ID: 44246200661)</a><br>
+  <strong>Workflow Status:</strong> <span class="badge-pass">SUCCESS (100% Passed)</span>
+</div>
+
 <table>
   <tr><th>CD Pipeline Stage</th><th>Expected Result</th><th>Status</th></tr>
   <tr><td>Repository checkout</td><td>Source code retrieved</td><td><span class="badge-pass">PASS</span></td></tr>
   <tr><td>Validate required Docker Hub secrets</td><td>Credentials confirmed</td><td><span class="badge-pass">PASS</span></td></tr>
   <tr><td>Set up Docker Buildx</td><td>Buildx engine initialized</td><td><span class="badge-pass">PASS</span></td></tr>
   <tr><td>Login to Docker Hub</td><td>Authenticated successfully</td><td><span class="badge-pass">PASS</span></td></tr>
-  <tr><td>Build and push backend image</td><td>Pushed to Docker Hub</td><td><span class="badge-pass">PASS</span></td></tr>
-  <tr><td>Build and push frontend image</td><td>Pushed to Docker Hub</td><td><span class="badge-pass">PASS</span></td></tr>
+  <tr><td>Build and push backend image</td><td>Pushed to Docker Hub (anushkakaushal/taskflow-backend:latest)</td><td><span class="badge-pass">PASS</span></td></tr>
+  <tr><td>Build and push frontend image</td><td>Pushed to Docker Hub (anushkakaushal/taskflow-frontend:latest)</td><td><span class="badge-pass">PASS</span></td></tr>
   <tr><td>Validate deployment Compose</td><td>No build directives, valid schema</td><td><span class="badge-pass">PASS</span></td></tr>
   <tr><td>Pull published images</td><td>Pulled from Docker Hub</td><td><span class="badge-pass">PASS</span></td></tr>
   <tr><td>Deploy using Docker Hub images</td><td>Containers started</td><td><span class="badge-pass">PASS</span></td></tr>
   <tr><td>Verify deployment (Backend /health)</td><td>Status: ok, postgres: ok, redis: ok</td><td><span class="badge-pass">PASS</span></td></tr>
   <tr><td>Verify frontend accessibility</td><td>HTTP 200 OK on port 8080</td><td><span class="badge-pass">PASS</span></td></tr>
-  <tr><td>Run API & Redis integration tests</td><td>All 12 test cases passed</td><td><span class="badge-pass">PASS</span></td></tr>
+  <tr><td>Run API & Redis integration tests</td><td>All 12 supertest test cases passed</td><td><span class="badge-pass">PASS</span></td></tr>
 </table>
 
 <h2>6. Declaration</h2>
