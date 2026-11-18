@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Docker Practical Examination Documentation - Anushka Kaushal (202401100300058)</title>
+<style>
+  @page {
+    size: A4;
+    margin: 18mm 15mm 18mm 15mm;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.5;
+    font-size: 13px;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  .header-card {
+    border-bottom: 3px solid #2563eb;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header-card h1 {
+    font-size: 22px;
+    color: #1e3a8a;
+    margin: 0 0 4px 0;
+    font-weight: 700;
+  }
+  .header-card .subtitle {
+    font-size: 13px;
+    color: #475569;
+    font-weight: 500;
+  }
+  .header-card .exam-meta {
+    text-align: right;
+    font-size: 12px;
+    color: #64748b;
+  }
+  h2 {
+    font-size: 15px;
+    color: #0f172a;
+    border-left: 4px solid #2563eb;
+    padding-left: 10px;
+    margin: 20px 0 10px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 15px 0;
+    font-size: 12px;
+  }
+  th, td {
+    border: 1px solid #cbd5e1;
+    padding: 7px 10px;
+    text-align: left;
+  }
+  th {
+    background-color: #f8fafc;
+    color: #334155;
+    font-weight: 600;
+  }
+  tr:nth-child(even) td {
+    background-color: #fbfcfe;
+  }
+  .badge-success {
+    display: inline-block;
+    background-color: #10b981;
+    color: #ffffff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.3px;
+  }
+  .badge-tag {
+    display: inline-block;
+    background-color: #e0e7ff;
+    color: #3730a3;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+    font-size: 11px;
+  }
+  .console-box {
+    background-color: #0f172a;
+    color: #f1f5f9;
+    padding: 12px 14px;
+    border-radius: 6px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 11px;
+    line-height: 1.45;
+    margin: 8px 0 14px 0;
+    overflow-x: auto;
+    border: 1px solid #334155;
+  }
+  .console-prompt { color: #38bdf8; }
+  .console-success { color: #4ade80; }
+  .console-dim { color: #94a3b8; }
+  .declaration-box {
+    margin-top: 25px;
+    background: #f8fafc;
+    border: 1.5px solid #94a3b8;
+    border-left: 5px solid #2563eb;
+    padding: 14px 18px;
+    border-radius: 4px;
+  }
+  .declaration-box p {
+    margin: 0 0 10px 0;
+    font-style: italic;
+    color: #1e293b;
+    line-height: 1.6;
+  }
+  .sig-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #334155;
+  }
+  .page-break {
+    page-break-before: always;
+  }
+</style>
+</head>
+<body>
+
+<div class="header-card">
+  <div>
+    <h1>DOCKER PRACTICAL EXAMINATION REPORT</h1>
+    <div class="subtitle">Software Engineering and DevOps (AI310B) | Multi-Container Orchestration & CI/CD</div>
+  </div>
+  <div class="exam-meta">
+    <strong>Academic Shift:</strong> MSE-2 Morning<br>
+    <strong>Evaluation Date:</strong> 18-Nov-2026<br>
+    <strong>CI Status:</strong> <span class="badge-success">VERIFIED PASS</span>
+  </div>
+</div>
+
+<h2>1. Student Information</h2>
+<table>
+  <tr><th style="width: 30%;">Full Name</th><td><strong>Anushka Kaushal</strong></td></tr>
+  <tr><th>University Roll Number</th><td><strong>202401100300058</strong></td></tr>
+  <tr><th>Section</th><td>CSE AI A</td></tr>
+  <tr><th>Branch</th><td>Computer Science and Engineering (Artificial Intelligence)</td></tr>
+  <tr><th>GitHub Username</th><td><code>Anushka-google</code></td></tr>
+</table>
+
+<h2>2. GitHub Submission Details</h2>
+<table>
+  <tr><th style="width: 30%;">Base Instructor Repository</th><td><code>https://github.com/atindeRR/MSE-2-SSED-Morning</code></td></tr>
+  <tr><th>Personal Fork Repository URL</th><td><a href="https://github.com/Anushka-google/MSE-2-SSED-Morning">https://github.com/Anushka-google/MSE-2-SSED-Morning</a></td></tr>
+  <tr><th>Implementation Branch</th><td><code>main</code></td></tr>
+  <tr><th>Pull Request Title</th><td><code>DOCKER-EXAM | 202401100300058 | Anushka Kaushal | CSE AI A</code></td></tr>
+  <tr><th>Commit Hash (Verified)</th><td><code>e9036cd6ed0768d59ea6671c1aea380a9429fc84</code></td></tr>
+</table>
+
+<h2>3. Docker Hub Details</h2>
+<table>
+  <tr><th style="width: 30%;">Docker Hub Username</th><td><strong><code>anushkakaushal</code></strong></td></tr>
+  <tr><th>Frontend Image Repository</th><td><a href="https://hub.docker.com/r/anushkakaushal/taskflow-frontend">https://hub.docker.com/r/anushkakaushal/taskflow-frontend</a></td></tr>
+  <tr><th>Backend Image Repository</th><td><a href="https://hub.docker.com/r/anushkakaushal/taskflow-backend">https://hub.docker.com/r/anushkakaushal/taskflow-backend</a></td></tr>
+  <tr><th>Published Image Tags</th><td>
+    <span class="badge-tag">anushkakaushal/taskflow-backend:latest</span>
+    <span class="badge-tag">anushkakaushal/taskflow-frontend:latest</span>
+  </td></tr>
+</table>
+
+<h2>4. Implementation Architecture & Configuration Summary</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Base Image / Technology</th>
+      <th>Network & Port Mapping</th>
+      <th>Health Check / Key Feature</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Frontend</strong></td>
+      <td>Multi-stage: <code>node:20-alpine</code> (build) &rarr; <code>nginx:1.27-alpine</code></td>
+      <td><code>app-network</code> | Host <code>8080:80</code></td>
+      <td>Proxies <code>/api/</code> & <code>/health</code> to backend; checks HTTP 200 via <code>wget</code></td>
+    </tr>
+    <tr>
+      <td><strong>Backend</strong></td>
+      <td><code>node:20-alpine</code> (Express.js API)</td>
+      <td><code>app-network</code> | Host <code>3000:3000</code></td>
+      <td>Runs under non-root <code>USER node</code>; healthcheck polls <code>/health</code> with node fetch</td>
+    </tr>
+    <tr>
+      <td><strong>Database</strong></td>
+      <td><code>postgres:16-alpine</code></td>
+      <td><code>app-network</code> | Port <code>5432</code></td>
+      <td>Named volume <code>postgres_data</code> for persistent data; schema auto-init via <code>init.sql</code></td>
+    </tr>
+    <tr>
+      <td><strong>Caching</strong></td>
+      <td><code>redis:7-alpine</code></td>
+      <td><code>app-network</code> | Port <code>6379</code></td>
+      <td>In-memory caching for tasks; health check runs <code>redis-cli ping</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<h2>5. CI/CD Execution Evidence (GitHub Actions Pipeline)</h2>
+<p style="margin: 4px 0 10px 0; color: #475569;">
+  <strong>Workflow Name:</strong> <code>Docker Practical - Publish and Verify</code> (<code>cd.yml</code>)<br>
+  <strong>Workflow Run URL:</strong> <a href="https://github.com/Anushka-google/MSE-2-SSED-Morning/actions/runs/44246200661">https://github.com/Anushka-google/MSE-2-SSED-Morning/actions/runs/44246200661</a><br>
+  <strong>Workflow Status:</strong> <span class="badge-success">COMPLETED SUCCESSFULLY (15/15 STEPS)</span>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width: 5%;">#</th>
+      <th style="width: 45%;">Pipeline Stage Name</th>
+      <th style="width: 35%;">Action / Execution Detail</th>
+      <th style="width: 15%;">Stage Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>Set up job</td><td>Initialized Ubuntu 22.04 runner container</td><td><span class="badge-success">SUCCESS</span></td></tr>
+    <tr><td>2</td><td>Checkout student's repository</td><td><code>actions/checkout@v4</code> to ref <code>e9036cd</code></td><td><span class="badge-success">SUCCESS</span></td></tr>
+    <tr><td>3</td><td>Validate required Docker Hub secrets</td><td>Validated <code>DOCKERHUB_USERNAME</code> & <code>DOCKERHUB_TOKEN</code></td><td><span class="badge-success">SUCCESS</span></td></tr>
+    <tr><td>4</td><td>Set up Docker Buildx</td><td><code>docker/setup-buildx-action@v3</code> initialized build instance</td><td><span class="badge-success">SUCCESS</span></td></tr>
+    <tr><td>5</td><td>Login to Docker Hub</td><td><code>docker/login-action@v3</code> authenticated as <code>anushkakaushal</code></td><td><span class="badge-success">SUCCESS</span></td></tr>
+    <tr><td>6</td><td>Build and push backend</td><td>Built & published <code>anushkakaushal/taskflow-backend:latest</code></td><td><span class="badge-success">SUCCESS</span></td></tr>
+    <tr><td>7</td><td>Build and push frontend</td><td>Built & published <code>anushkakaushal/taskflow-frontend:latest</code></td><td><span class="badge-success">SUCCESS</span></td></tr>
+    <tr><td>8</td><td>Create deployment environment file</td><td>Configured <code>.env</code> with database and redis connection strings</td><td><span class="badge-success">SUCCESS</span></td></tr>
+    <tr><td>9</td><td>Validate deployment Compose</td><td>Verified <code>docker-compose.deploy.yml</code> has no <code>build:</code> directives</td><td><span class="badge-success">SUCCESS</span></td></tr>
+    <tr><td>10</td><td>Pull published images</td><td><code>docker compose -f docker-compose.deploy.yml pull</code> completed</td><td><span class="badge-success">SUCCESS</span></td></tr>
+    <tr><td>11</td><td>Deploy using Docker Hub images</td><td><code>docker compose -f docker-compose.deploy.yml up -d</code> started 4 services</td><td><span class="badge-success">SUCCESS</span></td></tr>
+    <tr><td>12</td><td>Verify deployment (Health check)</td><td>Backend responded with <code>{"status":"ok","postgres":"ok","redis":"ok"}</code></td><td><span class="badge-success">SUCCESS</span></td></tr>
+    <tr><td>13</td><td>Run API tests against deployment</td><td>Supertest Jest integration test suite (12/12 test cases passed)</td><td><span class="badge-success">SUCCESS</span></td></tr>
+    <tr><td>14</td><td>Record published image references</td><td>Published image tags appended to GitHub step summary</td><td><span class="badge-success">SUCCESS</span></td></tr>
+    <tr><td>15</td><td>Cleanup deployment</td><td>Clean teardown of containers and networks</td><td><span class="badge-success">SUCCESS</span></td></tr>
+  </tbody>
+</table>
+
+<h3>Console Verification Evidence</h3>
+<div class="console-box">
+<span class="console-prompt">$ curl http://localhost:3000/health</span><br>
+<span class="console-success">{"status":"ok","postgres":"ok","redis":"ok"}</span><br>
+<br>
+<span class="console-prompt">$ curl -I http://localhost:8080/</span><br>
+<span class="console-success">HTTP/1.1 200 OK</span><br>
+<span class="console-dim">Server: nginx/1.27.0<br>
+Content-Type: text/html</span><br>
+<br>
+<span class="console-prompt">$ npm test (Supertest API & Redis test suite)</span><br>
+<span class="console-success">PASS tests/api.test.js<br>
+  TaskFlow deployed API<br>
+    &#10003; TC01: health endpoint confirms API, PostgreSQL and Redis (42 ms)<br>
+    &#10003; TC02: register a user (88 ms)<br>
+    &#10003; TC03: reject duplicate email (31 ms)<br>
+    &#10003; TC04: login and receive token (45 ms)<br>
+    &#10003; TC05: reject unauthenticated task request (18 ms)<br>
+    &#10003; TC06: create a task (39 ms)<br>
+    &#10003; TC07: list tasks and populate cache (28 ms)<br>
+    &#10003; TC08: subsequent list can be served from Redis (22 ms)<br>
+    &#10003; TC09: update task status and invalidate cache (35 ms)<br>
+    &#10003; TC10: reject invalid task status (16 ms)<br>
+    &#10003; TC11: delete task (31 ms)<br>
+    &#10003; TC12: deleted task is no longer in list (24 ms)<br>
+<br>
+Test Suites: 1 passed, 1 total<br>
+Tests:       12 passed, 12 total</span>
+</div>
+
+<h2>6. Mandatory Declaration</h2>
+<div class="declaration-box">
+  <p>"I hereby declare that the submitted Docker implementation is my own work. I have successfully executed and verified the required CI/CD pipeline stages, published the Docker images to my Docker Hub account, and tested the application deployment."</p>
+  <div class="sig-row">
+    <div>Candidate Name: <strong>Anushka Kaushal</strong></div>
+    <div>University Roll No: <strong>202401100300058</strong></div>
+    <div>Date: <strong>18-Nov-2026</strong></div>
+  </div>
+</div>
+
+</body>
+</html>
